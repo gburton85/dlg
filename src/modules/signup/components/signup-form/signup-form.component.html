@@ -1,0 +1,18 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="firstName" />
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="lastName" />
+
+  <label for="email">Email address: </label>
+  <input id="email" type="text" formControlName="email" />
+
+  <button type="submit" [disabled]="!signupForm.valid">
+    {{ isSubmitting ? "⏳" : "Submit" }}
+  </button>
+</form>
+
+@if (!signupForm.valid && signupForm.dirty) {
+<p class="error">Please fill out all fields</p>
+}

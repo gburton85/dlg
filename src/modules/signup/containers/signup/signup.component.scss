@@ -1,0 +1,22 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #efefea;
+
+  .container {
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    padding: 2.5rem;
+    min-height: 12.5rem;
+    width: 25rem;
+    margin: 2.5rem;
+    background: #fefefe;
+
+    @media screen and (max-width: 500px) {
+      width: unset;
+    }
+  }
+}

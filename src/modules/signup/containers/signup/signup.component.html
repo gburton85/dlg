@@ -1,0 +1,9 @@
+<section class="page">
+  <div class="container">
+    @if (!(isSignedUp$ | async)) {
+    <app-signup-form></app-signup-form>
+    } @else {
+    <app-signup-success></app-signup-success>
+    }
+  </div>
+</section>
